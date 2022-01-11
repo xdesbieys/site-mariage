@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+    node:
+        build:
+            context: .
+            target: node
+        volumes:
+            - ./app:/srv/app:rw,cached
+        ports:
+            - "3000:3000"
+        tty: true

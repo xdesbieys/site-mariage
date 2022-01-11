@@ -1,0 +1,35 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: Anaktoria;
+  font-weight: 400;
+  src: url(../font/anaktoria.woff2) format("woff2");
+  font-display: swap;
+}
+
+body {
+  @apply min-h-screen flex flex-col;
+
+  min-height: stretch;
+}
+
+html {
+  height: stretch;
+}
+
+#__nuxt,
+#__layout {
+  @apply flex flex-col flex-1;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
